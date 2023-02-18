@@ -1,12 +1,15 @@
-import { defineBuildConfig } from 'unbuild'
+import { defineBuildConfig } from "unbuild";
 
 export default defineBuildConfig({
   entries: [
-    'src/index',
+    {
+      input: "./packages/vite/src/index.ts",
+      name: "vite",
+    },
   ],
   declaration: true,
   clean: true,
   rollup: {
     emitCJS: true,
   },
-})
+});
